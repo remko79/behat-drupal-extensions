@@ -1,0 +1,16 @@
+{
+  "name": "remko79/behat-drupal-extensions",
+  "description": "Several behat extensions for testing Drupal features.",
+  "type": "behat-extension",
+  "license": "GPL-2.0+",
+  "require": {
+    "drupal/core": "^8.5",
+    "drupal/drupal-extension": "^3.4",
+    "behatch/contexts": "^3.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Behat\\remko79\\": "src"
+    }
+  }
+}
