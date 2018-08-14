@@ -1,0 +1,30 @@
+# Example behat.yml file.
+default:
+  suites:
+    json:
+      paths:
+      - features/json
+      contexts:
+      - Drupal\DrupalExtension\Context\MinkContext
+      - Drupal\DrupalExtension\Context\DrupalContext
+      - Behat\remko79\Context\ExtendedJsonRestContext
+      - behatch:context:json
+
+  formatters:
+    pretty: true
+
+  extensions:
+    Behatch\Extension: ~
+
+    Behat\MinkExtension:
+      default_session: goutte
+      goutte: ~
+
+    Drupal\DrupalExtension:
+      blackbox: ~
+      default_driver: 'drupal'
+      drupal:
+        drupal_root: 'web'
+
+imports:
+- behat.local.yml

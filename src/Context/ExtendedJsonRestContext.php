@@ -50,6 +50,7 @@ class ExtendedJsonRestContext extends RestContext {
   public function fetchNodeByInternalIdAsJson($type, $title) {
     $node = $this->getEntityByTitle('node', $type, $title);
     return $this->fetchUrlAsJson('/node/' . $node->id());
+
   }
 
   /**
